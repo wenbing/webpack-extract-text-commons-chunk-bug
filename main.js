@@ -1,13 +1,13 @@
 require('./main.gss');
 
 if (location.search.indexOf('a') !== -1) {
-  require.ensure([], function() {
-    require('./a.page');
-  }, 'a');
+	require.ensure(['./a.page'], function() {
+		require('./a.page');
+	}, 'aPage')
 }
 
 if (location.search.indexOf('b') !== -1) {
-  require.ensure([], function() {
-    require('./b.page');
-  }, 'b');
+    require.ensure(['./b.page'], function() {
+		require('./b.page');
+	}, 'bPage')
 }

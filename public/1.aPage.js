@@ -7,20 +7,16 @@ webpackJsonp([1],[
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
-	__webpack_require__.e/* nsure */(1, function() {
-	  __webpack_require__(6);
-	});
-
-
+	var TAG = 'I AM PAGE A'
+	__webpack_require__(6);
+	__webpack_require__(9)
 
 /***/ },
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(7);
 	document.body.appendChild(document.createTextNode('hello a'));
-	__webpack_require__(7)
-
 
 /***/ },
 /* 7 */
