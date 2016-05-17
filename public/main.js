@@ -73,7 +73,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({"1":"a","2":"b"}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({"1":"aPage","2":"bPage"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -91,30 +91,40 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
 
 	if (location.search.indexOf('a') !== -1) {
-	  __webpack_require__.e/* nsure */(1, function() {
-	    __webpack_require__(5);
-	  });
+		__webpack_require__.e/* nsure */(1, function() {
+			__webpack_require__(5);
+		})
 	}
 
 	if (location.search.indexOf('b') !== -1) {
-	  __webpack_require__.e/* nsure */(2, function() {
-	    __webpack_require__(9);
-	  });
+	    __webpack_require__.e/* nsure */(2, function() {
+			__webpack_require__(10);
+		})
 	}
 
 
 /***/ },
-/* 1 */
+
+/***/ 1:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
+/***/ },
+
+/***/ 9:
+/***/ function(module, exports) {
+
+	var TAG = 'I am common';
+
 /***/ }
-/******/ ]);
+
+/******/ });

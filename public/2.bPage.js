@@ -8,31 +8,30 @@ webpackJsonp([2],[
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__.e/* nsure */(2, function() {
-	  __webpack_require__(10);
-	});
-
-
-
-/***/ },
+/* 9 */,
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	document.body.appendChild(document.createTextNode('hello b'));
-	__webpack_require__(11)
+	var TAG = 'I AM PAGE B'
+	__webpack_require__(11);
+	__webpack_require__(9)
 
 
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(12);
+	document.body.appendChild(document.createTextNode('hello b'));
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(12);
+	var content = __webpack_require__(13);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -52,7 +51,7 @@ webpackJsonp([2],[
 	}
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();

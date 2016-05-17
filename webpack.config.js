@@ -4,21 +4,26 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './main.js',
+  entry: {
+    main: './main.js'
+  },
   module: {
     loaders: [
-      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+      },
       {
         test: /\.gss$/,
-        loaders: ExtractTextPlugin.extract('style-loader', ['css-loader']).split('!'),
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
       },
     ],
   },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('[name].css', { allChunks: true }),
     new webpack.optimize.CommonsChunkPlugin({
-      children: true,
-    }),
+      children: true
+    })
   ],
   output: {
     filename: '[name].js',

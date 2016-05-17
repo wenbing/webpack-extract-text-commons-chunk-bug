@@ -1,4 +1,3 @@
-require.ensure([], function() {
-  require('./b');
-}, 'b');
-
+var TAG = 'I AM PAGE B'
+require('./b');
+require('./common.js')
